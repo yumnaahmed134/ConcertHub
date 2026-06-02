@@ -167,14 +167,15 @@ app.get('/api', (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
-// ── Start Server ──────────────────────────────────────────────────────────────
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`\n🎤 ConcertHub Backend`);
-  console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`📖 API docs: http://localhost:${PORT}/api`);
-  console.log(`💚 Health:   http://localhost:${PORT}/api/health`);
-  console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`);
-});
+// // ── Start Server ──────────────────────────────────────────────────────────────
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => {
+//   console.log(`\n🎤 ConcertHub Backend`);
+//   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
+//   console.log(`🚀 Server running on port ${PORT}`);
+//   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+//   console.log(`📖 API docs: http://localhost:${PORT}/api`);
+//   console.log(`💚 Health:   http://localhost:${PORT}/api/health`);
+//   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`);
+// });
+module.exports = app;
