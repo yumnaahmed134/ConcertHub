@@ -1,6 +1,5 @@
 /* Location: ConcertHub/frontend/src/pages/user/UserPages.module.css */
 
-.page {}
 
 .header { margin-bottom: var(--space-8); }
 .eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 4px; }
@@ -105,7 +104,6 @@
 .walletCardSub { font-size: 12px; color: var(--text-secondary); }
 
 /* Transactions */
-.section {}
 .sectionHeader {
   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
   gap: var(--space-4); margin-bottom: var(--space-5);
