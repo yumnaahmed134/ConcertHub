@@ -94,24 +94,34 @@ const LoginPage = () => {
           </form>
 
           {/* Quick fills for dev */}
-          <div className={styles.devHints}>
-            <p className={styles.devLabel}>Quick login (dev)</p>
-            <div className={styles.devBtns}>
-              {[
-                { label: 'Admin', email: 'admin@concerthub.com', pwd: 'Admin@123' },
-                { label: 'Artist', email: 'luna@concerthub.com', pwd: 'Artist@123' },
-                { label: 'User', email: 'alice@example.com', pwd: 'User@123' },
-              ].map(d => (
-                <button
-                  key={d.label}
-                  className={styles.devBtn}
-                  onClick={() => setForm({ email: d.email, password: d.pwd })}
-                >
-                  {d.label}
-                </button>
-              ))}
+          {import.meta.env.DEV && (
+            <div className={styles.devHints}>
+              <p className={styles.devLabel}>Quick login (dev)</p>
+
+              <div className={styles.devBtns}>
+                {[
+                  { label: 'Admin', email: 'admin@concerthub.com', pwd: 'Admin@123' },
+                  { label: 'Artist', email: 'luna@concerthub.com', pwd: 'Artist@123' },
+                  { label: 'User', email: 'alice@example.com', pwd: 'User@123' },
+                ].map((d) => (
+                  <button
+                    key={d.label}
+                    type="button"
+                    className={styles.devBtn}
+                    onClick={() =>
+                      setForm({
+                        email: d.email,
+                        password: d.pwd,
+                      })
+                    }
+                  >
+                    {d.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )} 
+
         </div>
       </div>
     </div>
